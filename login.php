@@ -1,178 +1,155 @@
+<?php
+session_start();
+
+// ========== KONEKSI DATABASE ==========
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "perpustakaan"; // ganti sesuai database kamu
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+// ========== PROSES LOGIN ==========
+$pesan = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nip      = mysqli_real_escape_string($conn, $_POST['nip']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    $query = "SELECT * FROM login WHERE nip='$nip' AND password='$password' LIMIT 1";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        $data = mysqli_fetch_assoc($result);
+
+        $_SESSION['nip'] = $data['nip'];
+        $_SESSION['status'] = "login";
+
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        $pesan = "NIP atau Password salah!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Admin - Politeknik STMI Jakarta</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #1976d2, #0d47a1);
+      background: linear-gradient(135deg, #4A90E2, #355C7D);
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: #fff;
     }
 
-    .login-container {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(20px);
-      border-radius: 16px;
-      padding: 45px 50px;
-      width: 380px;
-      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
-      transition: 0.3s;
-    }
-
-    .login-container:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .login-container img {
-      display: block;
-      margin: 0 auto 20px;
-      width: 90px;
-    }
-
-    .login-container h2 {
+    .login-box {
+      background: #fff;
+      width: 350px;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 15px;
       font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .login-container p {
-      text-align: center;
-      font-size: 14px;
-      color: #cfd8dc;
-      margin-bottom: 30px;
+      font-weight: 600;
     }
 
     .input-group {
-      margin-bottom: 20px;
+      text-align: left;
+      margin-bottom: 15px;
     }
 
     .input-group label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #f1f1f1;
       font-size: 14px;
+      font-weight: 500;
     }
 
     .input-group input {
       width: 100%;
-      padding: 12px 14px;
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 8px;
-      background: rgba(255,255,255,0.2);
-      color: #fff;
-      font-size: 15px;
-      transition: 0.3s;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+      box-sizing: border-box;
     }
 
-    .input-group input::placeholder {
-      color: #e3f2fd;
-    }
-
-    .input-group input:focus {
-      outline: none;
-      border-color: #64b5f6;
-      background: rgba(255,255,255,0.3);
-    }
-
-    .login-btn {
+    .btn-login {
       width: 100%;
-      background: #ffca28;
-      border: none;
-      color: #0d47a1;
-      font-weight: 700;
-      font-size: 15px;
       padding: 12px;
-      border-radius: 8px;
+      background: #4A90E2;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: 0.2s;
+      font-weight: 600;
+      margin-top: 10px;
     }
 
-    .login-btn:hover {
-      background: #ffd54f;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    .btn-login:hover {
+      background: #357ABD;
     }
 
     .footer-text {
-      text-align: center;
-      margin-top: 25px;
+      margin-top: 15px;
       font-size: 13px;
-      color: #e3f2fd;
+      color: #666;
     }
 
-    @media (max-width: 480px) {
-      .login-container {
-        width: 90%;
-        padding: 30px;
-      }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="login-container">
-    <img src="images/Logo - STMI.svg" alt="Logo STMI">
+  <div class="login-box">
     <h2>Login Admin</h2>
-    <p>Politeknik STMI Jakarta</p>
 
-    <form id="loginForm">
+    <?php if ($pesan != "") { ?>
+      <p class="error"><?= $pesan ?></p>
+    <?php } ?>
+
+    <form method="POST">
+
       <div class="input-group">
-        <label for="nip">NIP</label>
-        <input type="text" id="nip" placeholder="Masukkan NIP">
+        <label>NIP</label>
+        <input type="text" name="nip" placeholder="Masukkan NIP" required>
       </div>
 
       <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Masukkan password">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Masukkan password" required>
       </div>
 
-      <button type="submit" class="login-btn">Masuk</button>
+      <button type="submit" class="btn-login">Login</button>
+
     </form>
 
-    <div class="footer-text">
-      © 2025 Politeknik STMI Jakarta
-    </div>
+    <p class="footer-text">Dummy Login Version</p>
   </div>
-
-  <script>
-    // Simulasi login sederhana
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const nip = document.getElementById("nip").value.trim();
-      const password = document.getElementById("password").value.trim();
-
-      if (nip === "" || password === "") {
-        alert("Harap isi NIP dan Password terlebih dahulu!");
-        return;
-      }
-
-      // Simulasi login berhasil
-      if (nip === "admin" && password === "12345") {
-       
-        window.location.href = "dashboard.html"; // arahkan ke halaman dashboard
-      } else {
-        alert("NIP atau Password salah!");
-      }
-    });
-  </script>
 
 </body>
 </html>

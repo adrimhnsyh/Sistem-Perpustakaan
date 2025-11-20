@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Cek apakah user sudah login
+if (!isset($_SESSION['nip'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$nip= $_SESSION['nip']; // dari login.php
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -5,6 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Intranet - Politeknik STMI Jakarta</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -186,6 +199,7 @@
   </style>
 </head>
 <body>
+
   <!-- Sidebar -->
   <aside class="sidebar">
     <div>
@@ -199,7 +213,7 @@
         <div class="menu-section">
           <h4>Admin</h4>
           <a href="#">🏠 Home</a>
-          <a href="pengunjung.html">📘 Perpustakaan</a>
+          <a href="pengunjung.php">📘 Perpustakaan</a>
         </div>
 
         <div class="menu-section">
@@ -210,7 +224,7 @@
 
         <div class="menu-section">
           <h4>Aplikasi Umum</h4>
-          <a href="#">📚 Perpustakaan</a>
+          <a href="perpustakaan.php">📚 Perpustakaan</a>
           <a href="#">🖼️ Album Foto</a>
           <a href="#">📢 Whistle Blowing System</a>
         </div>
@@ -244,7 +258,7 @@
   <main class="main-content">
     <header>
       <h2>Selamat Datang di Intranet Politeknik STMI Jakarta</h2>
-      <div class="user-info">👋 Halo, Nur Halimah</div>
+      <div class="user-info">👋 Halo, <?= htmlspecialchars($nip) ?></div>
     </header>
 
     <div class="content-box">
@@ -257,5 +271,6 @@
       Dikelola oleh Politeknik STMI Jakarta
     </footer>
   </main>
+
 </body>
 </html>
