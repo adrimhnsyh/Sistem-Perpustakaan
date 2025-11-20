@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Buku yang Belum Dikembalikan - Politeknik STMI Jakarta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #e3f2fd;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: linear-gradient(180deg, #1565c0, #0d47a1);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 4px 0 15px rgba(0,0,0,0.15);
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.3) transparent;
+    }
+
+    .sidebar::-webkit-scrollbar { width: 6px; }
+    .sidebar::-webkit-scrollbar-thumb {
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 10px;
+    }
+
+    .sidebar-header {
+      text-align: center;
+      padding: 25px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .sidebar-header img {
+      width: 100px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-header h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .sidebar-header p {
+      font-size: 13px;
+      color: #cfd8dc;
+      margin-top: 4px;
+    }
+
+    .menu {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .menu-section {
+      margin-bottom: 25px;
+    }
+
+    .menu-section h4 {
+      font-size: 14px;
+      color: #bbdefb;
+      margin-bottom: 8px;
+      border-left: 3px solid #ffca28;
+      padding-left: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding-left: 15px;
+    }
+
+    .menu .back-dashboard {
+      margin-top: 15px;
+      background-color: rgba(255, 255, 255, 0.15);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .menu .back-dashboard:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .sidebar-footer {
+      text-align: center;
+      padding: 15px;
+      background: rgba(255,255,255,0.1);
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 260px;
+      flex: 1;
+      background-color: #f8fbff;
+      padding: 25px;
+    }
+
+    header {
+      background: #1976d2;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header h2 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .user-info {
+      font-size: 14px;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    .content-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-top: 25px;
+    }
+
+    .content-box h3 {
+      color: #0d47a1;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead {
+      background-color: #1976d2;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f8ff;
+    }
+
+    tbody tr:hover {
+      background-color: #e3f2fd;
+    }
+
+    .arsip-link {
+      color: #1976d2;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .arsip-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .main-content { margin-left: 0; }
+      table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-header">
+        <img src="images/Logo - STMI.svg" alt="Logo STMI">
+        <h3>Politeknik STMI Jakarta</h3>
+        <p>Kementerian Perindustrian RI</p>
+      </div>
+
+      <div class="menu">
+        <div class="menu-section">
+          <h4>Menu Admin</h4>
+          <a href="daftarpinjam.html">📚 Daftar Pinjam</a>
+          <a href="transaksi.html">💳 Transaksi</a>
+          <a href="rekap.html">📊 Rekap Transaksi</a>
+          <a href="rekapta.html">📊 Rekap Transaksi TA</a>
+          <a href="koleksibuku.html">📘 Koleksi Buku</a>
+          <a href="#">📖 Kodifikasi Buku</a>
+          <a href="#">👥 Anggota</a>
+          <a href="pengunjung.html">🧍‍♂️ Daftar Pengunjung Perpustakaan</a>
+          <a href="#">🆕 Data Mahasiswa Baru</a>
+        </div>
+
+        <div class="menu-section">
+          <h4>Laporan</h4>
+          <a href="#">📨 Permohonan Surat Bebas Perpustakaan</a>
+          <a href="#">📈 Hasil Survey Kepuasan</a>
+        </div>
+
+        <a href="dashboard.html" class="back-dashboard">⬅️ Kembali ke Dashboard</a>
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      © 2025 Politeknik STMI Jakarta
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header>
+      <h2>Daftar Buku yang Belum Dikembalikan</h2>
+      <div class="user-info">👋 Halo, Admin</div>
+    </header>
+
+    <div class="content-box">
+      <h3>Data Peminjaman</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Judul Buku</th>
+            <th>Peminjam</th>
+            <th>Tgl. Pinjam</th>
+            <th>Batas Kembali</th>
+            <th>Surat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Production and Inventory Management</td>
+            <td>Rita Istikowati</td>
+            <td>08-09-2008</td>
+            <td>15-09-2008</td>
+            <td><a href="#" class="arsip-link">Arsip</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Perencanaan dan Pengawasan Produksi</td>
+            <td>WILDA SUKMAWATI, MT.</td>
+            <td>17-02-2009</td>
+            <td>24-02-2009</td>
+            <td><a href="#" class="arsip-link">Arsip</a></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Dasar - Dasar Matematika Ekonomi</td>
+            <td>WILDA SUKMAWATI, MT.</td>
+            <td>17-02-2009</td>
+            <td>24-02-2009</td>
+            <td><a href="#" class="arsip-link">Arsip</a></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Perilaku dalam Organisasi</td>
+            <td>Dewi Auditiya Marizka, ST</td>
+            <td>17-02-2009</td>
+            <td>24-02-2009</td>
+            <td><a href="#" class="arsip-link">Arsip</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      Dikelola oleh Politeknik STMI Jakarta
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PERPUSTAKAAN Politeknik STMI Jakarta</title>
+
+    <link rel="icon" type="image/png" href="images/LOGO STMI.png">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/tooplate-clean-work.css" rel="stylesheet">
+
+    <!-- Custom Style -->
+    <style>
+      /* Accordion Styling */
+      .accordion-button {
+        font-weight: 600;
+        background: #e9f2ff;
+        color: #0d47a1;
+        transition: all 0.3s ease;
+      }
+      .accordion-button:hover {
+        background: #bbdefb;
+        color: #08306b;
+      }
+      .accordion-button:not(.collapsed) {
+        background: #bbdefb;
+        color: #0d47a1;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+      }
+      .accordion-body {
+        background: #fff;
+        color: #333;
+        line-height: 1.7;
+      }
+      .accordion-item {
+        border-radius: 12px !important;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .featured-block {
+        background: #f9fafc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 d-flex flex-wrap">
+            <p class="d-flex me-4 mb-0">
+              <i class="bi-book me-2"></i> BACA BUKU
+            </p>
+            <p class="d-flex d-none d-md-block mb-0">
+              <i class="bi-clock-fill me-2"></i>
+              <strong>Senin - Jumat</strong> 7:30 AM - 16:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/Logo - STMI.svg" alt="Politeknik STMI Jakarta" class="logo-stmi">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Profil</a>
+              <ul class="dropdown-menu dropdown-menu-light">
+                <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                <li><a class="dropdown-item" href="visi misi.html">Visi Misi</a></li>
+                <li><a class="dropdown-item" href="tujuan-fungsi.html">Tujuan & Fungsi</a></li>
+                <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                <li><a class="dropdown-item" href="peraturan.html">Peraturan & Tata Tertib</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link active" href="layanan.html">Layanan</a></li>
+            <li class="nav-item"><a class="nav-link" href="E-Resources.html">E-Resources</a></li>
+            <li class="nav-item ms-3">
+              <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="#">Get started</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Banner -->
+      <section class="banner-section d-flex justify-content-center align-items-end">
+        <div class="section-overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <h1 class="text-white mb-lg-0">Layanan Perpustakaan</h1>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-lg-end align-items-center ms-auto">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Layanan Perpustakaan</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Konten -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 col-12">
+              <div class="featured-block shadow-sm p-4 rounded-4">
+                <p>
+                  Perpustakaan Politeknik STMI Jakarta menyediakan berbagai layanan untuk mendukung kegiatan akademik mahasiswa, dosen, dan karyawan. Berikut penjelasan setiap layanan:
+                </p>
+
+                <div class="accordion mt-3" id="layananAccordion">
+                    <!-- Sirkulasi -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1. Layanan Sirkulasi
+                        </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                            <p>Kata sirkulasi berasal dari bahasa inggris “circulation” yang mempunyai arti perputaran, peredaran. Sedangkan dalam ilmu perpustakaan, kata sirkulasi sering dikenal dengan peminjaman namun demikian pengertian pelayanan sirkulasi sebenarnya adalah mencakup semua bentuk kegiatan pencatatan yang berkaitan dengan pemanfaatan bahan pustaka. Menurut Bafadal-Ibrahim (2000:24), “Pelayanan sirkulasi adalah kegiatan kerja yang berupa pemberian bantuan kepada pemakai perpustakaan dalam proses peminjaman dan pengembalian bahan pustaka.”
+
+Salah satu kegiatan utama atau jasa utama perpustakaan adalah peminjaman buku dan materi lainya. Kegiatan peminjaman ini sering dikenal dengan nama sirkulasi artinya peminjaman. Meja sirkulasi, seringkali di anggap ujung tombak jasa perpustakaan karena bagian inilah yang pertama kali berhubungan dengan pengguna atau pemakai serta paling sering di gunakan pemakai, karenanya unjuk kerja staf sirkulasi dapat berpengaruh terhadap citra perpustakaan (Sulistiyo-Basuki 1991 : 257).
+
+Dari beberapa uraian diatas dapat disimpulkan bahwa pelayanan sirkulasi adalah kegiatan yang harus ada di dalam perpustakaan yang berhubungan dengan bagian peminjaman dan pengembalian bahan pustaka agar dapat dipergunakan oleh pengguna secara maksimal. Agar perpustakaan dapat memainkan peranya dengan baik/berdaya guna maka perpustakaan harus didukung oleh sarana, prasarana serta tenaga kerja pengelola yang handal. Untuk itu tenaga pengelola perpustakaan perlu dibekali pengetahuan dan keterampilan mengelola perpustakaan khususnya pada bagian pelayanan sirkulasi.
+
+Koleksi Perpustakaan yang boleh dipinjam untuk dibawa pulang adalah koleksi buku teks/buku umum seperti buku dengan subjek komputer, motivasi, sosial, ekonomi, sejarah, ilmu-ilmu alam, novel atau fiksi dan buku-buku penunjang perkuliahan.
+</p>
+                            <p><strong>Alur Peminjaman Buku:</strong></p>
+                            <ul>
+                                <li>Pemustaka mengisi buku tamu kunjungan.</li>
+                                <li>Pemustaka mencari koleksi ke katalog online atau mencari langsung ke rak buku.</li>
+                                <li>Pemustaka menuju meja sirkulasi atau petugas perpustakaan untuk meminjam buku, dengan menyerahkan Kartu Tanda Mahasiswa (KTM).</li> 
+                                <li>Pustakawan akan memproses peminjaman pada sistem informasi perpustakaan.</li>
+                                <li>Jumlah pinjaman buku yang dipinjam maksimal 2 judul buku.</li> 
+                                <li>Lama peminjaman adalah selama 7 (tujuh hari kerja).</li>
+                                <li>Pustakawan memberi stampel masa pinjam buku dan menyerahkan buku ke pemustaka.</li>
+                                <li>Selesai, pemustaka dapat meninggalkan ruang perpustakaan atau tetap melanjutkan berkunjung di dalam ruang perpustakaan.</li>
+                           </ul> 
+                            <p><strong>Alur Pengembalian & Perpanjangan:</strong></p>
+                            <ul>
+                            <li>Petugas memproses pengembalian & mengecek keterlambatan</li>
+                            <li>Perpanjangan dapat dilakukan 1 kali bila tidak dibutuhkan pihak lain</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Referensi -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2. Layanan Referensi
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                            <p>Layanan referensi menyediakan koleksi seperti kamus, ensiklopedia, direktori, dan laporan penelitian yang hanya dapat digunakan di ruang perpustakaan.</p>
+                            <ul>
+                            <li>Layanan Informasi</li>
+                            <li>Bimbingan Pemustaka Koleksi Referensi</li>
+                            <li>Layanan Penelusuran</li>
+                            <li>Layanan Cek Plagiarisme</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Penelusuran -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3. Layanan Penelusuran
+                        </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                        <div class="accordion-body">
+                            <p>Layanan penelusuran membantu pemustaka menemukan informasi yang relevan melalui koleksi digital, katalog online, dan bantuan petugas.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Plagiarisme -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            4. Layanan Cek Plagiarisme
+                        </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                        <div class="accordion-body">
+                            <p>Layanan Turnitin digunakan untuk memeriksa tingkat kesamaan laporan tugas akhir mahasiswa. Batas maksimal kesamaan adalah 30%.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Surat Bebas -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            5. Layanan Surat Bebas Perpustakaan
+                        </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                        <div class="accordion-body">
+                            <p>Mahasiswa dapat mengurus surat bebas perpustakaan setelah menyelesaikan tugas akhir, melengkapi hasil Turnitin, dan menyerahkan hardcopy laporan.</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+            <div class="container">
+                <div class="row align-items-start">
+
+                    <!-- Kolom Logo -->
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <img src="images/LOGO STMI.png" alt="Logo STMI" class="img-fluid mb-3" style="max-width: 150px;">
+                        <h5 class="text-white fw-bold">Perpustakaan STMI Jakarta</h5>
+                        <p class="text-white-50 mb-0">Melayani dengan ilmu dan integritas</p>
+                    </div>
+
+                    <!-- Kolom Media Sosial -->
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3"><b>Media Sosial</b></h5>
+                        <ul class="list-unstyled mt-3">
+
+                        <!-- Gmail 1 -->
+                        <li class="d-flex align-items-center mb-2">
+                            <a href="mailto:perpustakaan@stmi.ac.id" target="_blank" class="social-icon-link text-white fs-5 me-2">
+                            <i class="bi bi-envelope-fill"></i>
+                            </a>
+                            <span class="text-white-50">perpustakaan@stmi.ac.id</span>
+                        </li>
+
+                        <!-- Gmail 2 -->
+                        <li class="d-flex align-items-center mb-2">
+                            <a href="mailto:lib.politeknikstmi@gmail.com" target="_blank" class="social-icon-link text-white fs-5 me-2">
+                            <i class="bi bi-envelope-fill"></i>
+                            </a>
+                            <span class="text-white-50">lib.politeknikstmi@gmail.com</span>
+                        </li>
+
+                        <!-- Instagram 1 -->
+                        <li class="d-flex align-items-center mb-2">
+                            <a href="https://instagram.com/stmijakarta" target="_blank" class="social-icon-link text-white fs-5 me-2">
+                            <i class="bi bi-instagram"></i>
+                            </a>
+                            <span class="text-white-50">@stmijakarta</span>
+                        </li>
+
+                        <!-- Instagram 2 -->
+                        <li class="d-flex align-items-center mb-2">
+                            <a href="https://instagram.com/perpus.politeknikstmijkt" target="_blank" class="social-icon-link text-white fs-5 me-2">
+                            <i class="bi bi-instagram"></i>
+                            </a>
+                            <span class="text-white-50">@perpus.politeknikstmijkt</span>
+                        </li>
+                        
+                        <!-- tiktok -->
+                        <li class="d-flex align-items-center mb-2">
+                            <a href="https://www.tiktok.com/@perpustakaan_stmijkt" target="_blank" class="social-icon-link text-white fs-5 me-2">
+                            <i class="bi bi-tiktok"></i>
+                            </a>
+                            <span class="text-white-50">@perpustakaan_stmijkt</span>
+                        </li>
+
+                        </ul>
+
+                        <p class="text-white-50 mt-3">Ikuti kami untuk informasi dan update terbaru.</p>
+                    </div>
+
+                    <!-- Kolom Kontak dan Jam Layanan -->
+                    <div class="col-lg-5 col-md-6 col-12 mb-4">
+                    <h5 class="site-footer-title mt-4 mb-3 text-white"><b>Jam Layanan Perpustakaan</b></h5>
+                    <div class="jam-layanan">
+                    <p class="mb-1"><strong>Senin – Kamis:</strong> 08:00 – 16:00 WIB</p>
+                    <p class="mb-1"><strong>Istirahat:</strong> 12:00 – 13:00 WIB</p>
+                    <p class="mb-1"><strong>Jum’at:</strong> 08:00 – 16:30 WIB</p>
+                    <p class="mb-0"><strong>Istirahat:</strong> 11:30 – 13:00 WIB</p>
+                    </div>
+                    </div>
+
+                </div>
+            
+
+                <!-- Bagian bawah footer -->
+                <div class="site-footer-bottom py-3">
+                    <div class="container text-center">
+                    <p class="mb-0 text-white-50">
+                        © 2025 Perpustakaan Politeknik STMI Jakarta
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
