@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <link rel="icon" type="image/png" href="images/LOGO STMI.png">
+        <link rel="icon" type="image/png" href="../images/LOGO STMI.png">
         <title>PERPUSTAKAAN Politeknik STMI Jakarta</title>
 
         <!-- CSS FILES -->        
@@ -17,11 +17,9 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="css/tooplate-clean-work.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
+        <link href="../css/tooplate-clean-work.css" rel="stylesheet">
 
     </head>
     
@@ -50,7 +48,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                <a class="navbar-brand d-flex align-items-center" href="#!">
-                    <img src="images/Logo - STMI.svg" alt="Politeknik STMI Jakarta" class="logo-stmi">
+                    <img src="../images/Logo - STMI.svg" alt="Politeknik STMI Jakarta" class="logo-stmi">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,42 +58,44 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
 
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                                <li><a class="dropdown-item" href="sejarah.php">Sejarah</a></li>
 
-                                <li><a class="dropdown-item" href="visi misi.html">Visi Misi</a></li>
+                                <li><a class="dropdown-item" href="visi_misi.php">Visi Misi</a></li>
 
-                                <li><a class="dropdown-item" href="tujuan-fungsi.html">Tujuan & Fungsi</a></li>
+                                <li><a class="dropdown-item active" href="tujuan_fungsi.php">Tujuan & Fungsi</a></li>
 
-                                <li><a class="dropdown-item active" href="struktur.html">Struktur Organisasi</a></li>
+                                <li><a class="dropdown-item" href="struktur.php">Struktur Organisasi</a></li>
 
-                                <li><a class="dropdown-item" href="peraturan.html">Peraturan & Tata Tertib</a></li>
+                                <li><a class="dropdown-item" href="peraturan.php">Peraturan & Tata Tertib</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">   
-                            <a class="nav-link" href="layanan.html">Layanan</a>
+                            <a class="nav-link" href="layanan.php">Layanan</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="E-Resources.html">E-Resources</a>
+                            <a class="nav-link" href="e-resources.php">E-Resources</a>
                         </li>
 
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="#">Get started</a>
+                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="login.php">Login Admin</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <section class="banner-section d-flex justify-content-center align-items-end">
+        <main>
+
+            <section class="banner-section d-flex justify-content-center align-items-end">
                 <div class="section-overlay"></div>
 
                 <div class="container">
@@ -108,7 +108,7 @@
                         <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Tujuan dan Fungsi</li>
                                 </ol>
                             </nav>
@@ -118,18 +118,44 @@
                 </div>
             </section>
 
-        <main>
+            <section class="section-padding">
+                <div class="container">
+                    <div class="row justify-content-center">
 
-            <section class="section-padding bg-light">
-                <div class="container text-center">
-                    <h2 class="mb-5 fw-bold text-primary">STRUKTUR ORGANISASI</h2>
-                    <h4 class="text-dark mb-4">Perpustakaan Politeknik STMI Jakarta</h4>
+                        <div class="col-lg-10 col-12">
+                            <div class="featured-block shadow-sm p-4 rounded-4" style="background-color: #f9fafc;">
+                                <h2 class="mb-4 text-center fw-bold text-primary">
+                                    Tujuan dan Fungsi Perpustakaan <br>Politeknik STMI Jakarta
+                                </h2>
 
-                    <div class="org-chart-wrapper">
-                        <img src="images/so/so.png" alt="Struktur Organisasi" class="img-fluid org-chart-img">
+                                <div class="text-content" style="text-align: justify; line-height: 1.8; font-size: 1rem; color: #333;">
+                                    <p><strong>Tujuan perpustakaan</strong> dalam pengembangan koleksi perpustakaan adalah sebagai berikut:</p>
+
+                                    <ol style="margin-left: 1.2rem;">
+                                        <li>Mendukung proses belajar mengajar dengan menyediakan sumber informasi yang berkualitas dan relevan.</li>
+                                        <li>Mengembangkan koleksi perpustakaan sesuai dengan kebutuhan kurikulum dan perkembangan ilmu pengetahuan.</li>
+                                        <li>Menyediakan layanan perpustakaan yang efisien, efektif, dan berbasis teknologi informasi serta komunikasi.</li>
+                                        <li>Meningkatkan literasi informasi bagi sivitas akademika melalui program pelatihan dan bimbingan.</li>
+                                        <li>Menjadi mitra strategis dalam pencapaian visi dan misi Politeknik STMI Jakarta sebagai institusi pendidikan vokasi industri yang unggul dan berdaya saing global.</li>
+                                    </ol>
+
+                                    <p class="mt-4"><strong>Fungsi perpustakaan</strong> dalam pengembangan koleksi perpustakaan meliputi:</p>
+
+                                    <ol style="margin-left: 1.2rem;">
+                                        <li><strong>Fungsi Edukatif:</strong> Menyediakan bahan pustaka yang sesuai dengan kebutuhan pemustaka.</li>
+                                        <li><strong>Fungsi Informatif:</strong> Menyediakan bahan pustaka yang memuat informasi berbagai ilmu pengetahuan yang bermutu dan terbaru (up to date).</li>
+                                        <li><strong>Fungsi Penelitian:</strong> Menyediakan bahan pustaka yang dapat dijadikan sebagai sumber informasi untuk penelitian ilmiah di berbagai bidang ilmu pengetahuan.</li>
+                                        <li><strong>Fungsi Administratif:</strong> Melaksanakan kegiatan pencatatan, pengolahan, dan penyimpanan bahan pustaka serta menyelenggarakan layanan yang efektif dan efisien.</li>
+                                        <li><strong>Fungsi Rekreatif:</strong> Menyediakan bahan pustaka bersifat rekreatif (hiburan) dan bermutu untuk mengisi waktu senggang pemustaka.</li>
+                                    </ol>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+
 
         </main>
 
@@ -140,7 +166,7 @@
 
                     <!-- Kolom Logo -->
                     <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <img src="images/LOGO STMI.png" alt="Logo STMI" class="img-fluid mb-3" style="max-width: 150px;">
+                        <img src="../images/LOGO STMI.png" alt="Logo STMI" class="img-fluid mb-3" style="max-width: 150px;">
                         <h5 class="text-white fw-bold">Perpustakaan STMI Jakarta</h5>
                         <p class="text-white-50 mb-0">Melayani dengan ilmu dan integritas</p>
                     </div>
@@ -181,6 +207,14 @@
                             </a>
                             <span class="text-white-50">@perpus.politeknikstmijkt</span>
                         </li>
+                        
+                        <!-- tiktok -->
+                        <li class="d-flex align-items-center mb-2">
+                            <a href="https://www.tiktok.com/@perpustakaan_stmijkt" target="_blank" class="social-icon-link text-white fs-5 me-2">
+                            <i class="bi bi-tiktok"></i>
+                            </a>
+                            <span class="text-white-50">@perpustakaan_stmijkt</span>
+                        </li>
 
                         </ul>
 
@@ -212,15 +246,14 @@
         </footer>
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/countdown.js"></script>
-        <script src="js/init.js"></script>
-        <script src="js/modernizr.js"></script>
-        <script src="js/animated-headline.js"></script>
-        <script src="js/custom.js"></script>
-
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.backstretch.min.js"></script>
+        <script src="../js/counter.js"></script>
+        <script src="../js/countdown.js"></script>
+        <script src="../js/init.js"></script>
+        <script src="../js/modernizr.js"></script>
+        <script src="../js/animated-headline.js"></script>
+        <script src="../js/custom.js"></script>
     </body>
 </html>

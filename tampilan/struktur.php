@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <link rel="icon" type="image/png" href="images/LOGO STMI.png">
+        <link rel="icon" type="image/png" href="../images/LOGO STMI.png">
         <title>PERPUSTAKAAN Politeknik STMI Jakarta</title>
 
         <!-- CSS FILES -->        
@@ -17,11 +17,9 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="css/tooplate-clean-work.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-icons.css" rel="stylesheet">
+        <link href="../css/tooplate-clean-work.css" rel="stylesheet">
 
     </head>
     
@@ -50,7 +48,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                <a class="navbar-brand d-flex align-items-center" href="#!">
-                    <img src="images/Logo - STMI.svg" alt="Politeknik STMI Jakarta" class="logo-stmi">
+                    <img src="../images/Logo - STMI.svg" alt="Politeknik STMI Jakarta" class="logo-stmi">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,58 +58,56 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
 
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
 
                             <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                                <li><a class="dropdown-item" href="sejarah.php">Sejarah</a></li>
 
-                                <li><a class="dropdown-item active" href="visi misi.html">Visi Misi</a></li>
+                                <li><a class="dropdown-item" href="visi_misi.php">Visi Misi</a></li>
 
-                                <li><a class="dropdown-item" href="tujuan-fungsi.html">Tujuan & Fungsi</a></li>
+                                <li><a class="dropdown-item" href="tujuan_fungsi.php">Tujuan & Fungsi</a></li>
 
-                                <li><a class="dropdown-item" href="struktur.html">Struktur Organisasi</a></li>
+                                <li><a class="dropdown-item active" href="struktur.php">Struktur Organisasi</a></li>
 
-                                <li><a class="dropdown-item" href="peraturan.html">Peraturan & Tata Tertib</a></li>
+                                <li><a class="dropdown-item" href="peraturan.php">Peraturan & Tata Tertib</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">   
-                            <a class="nav-link" href="layanan.html">Layanan</a>
+                            <a class="nav-link" href="layanan.php">Layanan</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="E-Resources.html">E-Resources</a>
+                            <a class="nav-link" href="e-resources.php">E-Resources</a>
                         </li>
 
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="#">Get started</a>
+                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="login.php">Login Admin</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main>
-
-            <section class="banner-section d-flex justify-content-center align-items-end">
+        <section class="banner-section d-flex justify-content-center align-items-end">
                 <div class="section-overlay"></div>
 
                 <div class="container">
                     <div class="row">
 
                         <div class="col-lg-7 col-12">
-                            <h1 class="text-white mb-lg-0">VISI MISI</h1>
+                            <h1 class="text-white mb-lg-0">Struktur Organisasi</h1>
                         </div>
 
                         <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">visi misi</li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Struktur Organisasi</li>
                                 </ol>
                             </nav>
                         </div>
@@ -120,71 +116,17 @@
                 </div>
             </section>
 
-            <section class="section-padding" style="background: linear-gradient(180deg, #f7faff 0%, #e9eef7 100%);">
-                <div class="container">
-                    <div class="row justify-content-center">
-                    <!-- Visi -->
-                    <div class="col-lg-8 col-12 mb-5">
-                        <div class="card shadow-lg border-0 p-4 text-center" style="border-radius: 20px; background: white;">
-                        <h3 class="fw-bold text-primary mb-3">VISI</h3>
-                        <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
-                            Terwujudnya perpustakaan sebagai pusat layanan informasi dan referensi yang inovatif, berbasis teknologi informasi sebagai pendukung utama tercapainya Tridharma Perguruan Tinggi.
-                        </p>
-                        </div>
-                    </div>
-
-                    <!-- Misi -->
-                    <div class="col-lg-10 col-12">
-                        <div class="card shadow-lg border-0 p-5" style="border-radius: 20px; background: white;">
-                        <h3 class="fw-bold text-primary text-center mb-4">MISI</h3>
-                        <ol class="list-group list-group-numbered">
-                            <li class="list-group-item border-0 py-3 d-flex align-items-start" style="background: transparent;">
-                            <i class="bi bi-bookmark-check-fill text-primary me-3 fs-5"></i>
-                            <span>Menyediakan koleksi perpustakaan yang lengkap dan berkualitas dalam berbagai bidang ilmu pengetahuan sebagai pendukung proses pembelajaran, pengajaran, dan riset ilmiah.</span>
-                            </li>
-                            <li class="list-group-item border-0 py-3 d-flex align-items-start" style="background: transparent;">
-                            <i class="bi bi-lightbulb-fill text-primary me-3 fs-5"></i>
-                            <span>Memberikan layanan informasi yang prima dan responsif terhadap kebutuhan sivitas akademika.</span>
-                            </li>
-                            <li class="list-group-item border-0 py-3 d-flex align-items-start" style="background: transparent;">
-                            <i class="bi bi-laptop-fill text-primary me-3 fs-5"></i>
-                            <span>Mengembangkan sistem perpustakaan berbasis teknologi informasi dan komunikasi untuk meningkatkan aksesibilitas dan efisiensi layanan.</span>
-                            </li>
-                            <li class="list-group-item border-0 py-3 d-flex align-items-start" style="background: transparent;">
-                            <i class="bi bi-graph-up text-primary me-3 fs-5"></i>
-                            <span>Meningkatkan pemanfaatan perpustakaan secara efektif dengan melaksanakan program-program literasi informasi.</span>
-                            </li>
-                            <li class="list-group-item border-0 py-3 d-flex align-items-start" style="background: transparent;">
-                            <i class="bi bi-people-fill text-primary me-3 fs-5"></i>
-                            <span>Meningkatkan kompetensi sumber daya manusia perpustakaan melalui pelatihan dan pengembangan profesional berkelanjutan.</span>
-                            </li>
-                            <li class="list-group-item border-0 py-3 d-flex align-items-start" style="background: transparent;">
-                            <i class="bi bi-globe2 text-primary me-3 fs-5"></i>
-                            <span>Menjalin kerjasama dengan institusi lain untuk memperluas jaringan informasi dan sumber daya perpustakaan.</span>
-                            </li>
-                        </ol>
-                        </div>
-                    </div>
-
+        <main>
+            <section class="section-padding bg-light">
+                <div class="container text-center">
+                    <h2 class="mb-5 fw-bold text-primary">STRUKTUR ORGANISASI<br>
+                    Perpustakaan Politeknik STMI Jakarta</h2>
+                    <div class="org-chart-wrapper">
+                        <img src="../images/so/so.png" alt="Struktur Organisasi" class="img-fluid org-chart-img">
                     </div>
                 </div>
             </section>
-    
-            <style>
-                .card {
-                    transition: all 0.3s ease;
-                }
-                .card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-                }
-                .list-group-item i {
-                    flex-shrink: 0;
-                }
-            </style>
-
         </main>
-
 
         <footer class="site-footer">
             <div class="container">
@@ -192,7 +134,7 @@
 
                     <!-- Kolom Logo -->
                     <div class="col-lg-3 col-md-6 col-12 mb-4">
-                        <img src="images/LOGO STMI.png" alt="Logo STMI" class="img-fluid mb-3" style="max-width: 150px;">
+                        <img src="../images/LOGO STMI.png" alt="Logo STMI" class="img-fluid mb-3" style="max-width: 150px;">
                         <h5 class="text-white fw-bold">Perpustakaan STMI Jakarta</h5>
                         <p class="text-white-50 mb-0">Melayani dengan ilmu dan integritas</p>
                     </div>
@@ -233,14 +175,6 @@
                             </a>
                             <span class="text-white-50">@perpus.politeknikstmijkt</span>
                         </li>
-                        
-                        <!-- tiktok -->
-                        <li class="d-flex align-items-center mb-2">
-                            <a href="https://www.tiktok.com/@perpustakaan_stmijkt" target="_blank" class="social-icon-link text-white fs-5 me-2">
-                            <i class="bi bi-tiktok"></i>
-                            </a>
-                            <span class="text-white-50">@perpustakaan_stmijkt</span>
-                        </li>
 
                         </ul>
 
@@ -272,15 +206,15 @@
         </footer>
 
         <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.backstretch.min.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/countdown.js"></script>
-        <script src="js/init.js"></script>
-        <script src="js/modernizr.js"></script>
-        <script src="js/animated-headline.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/jquery.backstretch.min.js"></script>
+        <script src="../js/counter.js"></script>
+        <script src="../js/countdown.js"></script>
+        <script src="../js/init.js"></script>
+        <script src="../js/modernizr.js"></script>
+        <script src="../js/animated-headline.js"></script>
+        <script src="../js/custom.js"></script>
 
     </body>
 </html>
